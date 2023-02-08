@@ -7,6 +7,7 @@ import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Restop from './Restop';
 import Restreview from './Restreview';
+import { useDispatch, useSelector } from 'react-redux';
 function Viewrest() {
     const urlParams = useParams()
     console.log(urlParams.id);
@@ -21,6 +22,9 @@ function Viewrest() {
                 .then((result) => setRestaurantlist(result.restaurants))
             )
     }
+
+// const {restaurantlist}=useSelector(state=>state.restReducer)
+// console.log(restaurantlist);
 
     console.log(restaurantlist);
 
